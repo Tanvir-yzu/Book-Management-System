@@ -1,0 +1,9 @@
+{% for book in books %}
+  <div class="book-entry">
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.author }}</p>
+    <a href="{% url 'book-detail' book.id %}" class="btn btn-primary">View</a>
+    <a href="{% url 'book-update' book.id %}" class="btn btn-warning">Edit</a>
+    <a href="{% url 'book-delete' book.id %}" class="btn btn-danger">Delete</a>
+  </div>
+{% endfor %}
